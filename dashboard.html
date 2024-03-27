@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cheaply - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="container-fluid border-bottom shadow-sm fixed-top bg-white ">
+        <nav class="navbar navbar-expand-md pb-1 ">
+            <a href="/dashboard.html" class="navbar-brand ">
+                <img src="./assets/logoipsum-298.svg" alt="Logo cheaply" class="me-1">
+                cheaply
+            </a>
+            <div class="btn-wrapper d-flex order-md-last gap-2 align-items-baseline  ">
+                <button class="btn d-md-none fs-3 p-0  " data-bs-toggle="collapse"
+                    data-bs-target="#navbarSearch"><ion-icon name="search"></ion-icon></button>
+                <a href="/index.html" class="fs-2 text-black icon-link text-decoration-none "><ion-icon
+                        name="globe-outline"></ion-icon><span class="fs-6 d-none d-md-inline ">View Site</span></a>
+                <button class="btn fs-3 p-0  d-md-none " data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebarMenu"><ion-icon name="grid"></ion-icon>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse justify-content-center " id="navbarSearch">
+                <div class="searchbar d-flex gap-2 p-2 ">
+                    <input type="text" class="form-control form-control-sm " placeholder="Type here...">
+                    <button class="btn btn-sm  btn-outline-dark">Search</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="offcanvas-start offcanvas-md col-md-3 col-lg-2 border-end shadow position-fixed "
+                id="sidebarMenu">
+                <div class="offcanvas-header">
+                    <img src="./assets/logoipsum-298.svg" alt="Logo cheaply" class="me-1 ">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body py-4 text-secondary d-flex flex-column justify-content-between h-100 small">
+                    <nav>
+                        <h3 class="h5">Frontend</h3>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="/index.html"
+                                    class="nav-link text-secondary icon-link "><ion-icon name="home"></ion-icon>Home</a>
+                            </li>
+                            <li class="nav-item"><a href="#"
+                                    class="disabled nav-link text-secondary icon-link"><ion-icon
+                                        name="person-circle"></ion-icon>About</a></li>
+                            <li class="nav-item"><a href="#"
+                                    class="disabled nav-link text-secondary icon-link"><ion-icon
+                                        name="call"></ion-icon>Contact</a></li>
+                        </ul>
+                    </nav>
+                    <nav>
+                        <h3 class="h5">Backend</h3>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="/dashboard.html"
+                                    class="nav-link text-body-emphasis  icon-link"><ion-icon
+                                        name="analytics"></ion-icon>Dashboard</a></li>
+                            <li class="nav-item"><a href="/add.html" class="nav-link text-secondary icon-link">
+                                    <ion-icon name="add-circle"></ion-icon>Add item</a></li>
+                            <li class="nav-item"><a href="#"
+                                    class="nav-link text-secondary icon-link disabled "><ion-icon
+                                        name="settings"></ion-icon>Settings</a></li>
+                        </ul>
+                    </nav>
+                    <div class="d-flex align-items-center border-top pt-2 ">
+                        <div class="pic-container">
+                            <img src="https://placebeard.it/640/480" alt=""
+                                class="h-100 w-100  rounded-circle object-fit-cover ">
+                        </div>
+                        <div class="small ps-2 ">
+                            <a href="#" class="disabled nav-link  ">@giacomosx</a>
+                            <a href="#" class="disabled icon-link nav-link  ">Logout<ion-icon
+                                    name="log-out-outline"></ion-icon></a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <section class="col-12 col-md-9 offset-md-3 col-lg-10 offset-lg-2 pt-4 mt-5 px-3">
+                <section class="row spinner-container">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-center py-5 m-5 ">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <main class="mb-5 d-none" id="mainContent">
+                    <div class="row py-2 ">
+                        <div class="col-12">
+                            <h3 class="icon-link page__title"><ion-icon name="analytics"></ion-icon>Dashboard</h3>
+                        </div>
+                    </div>
+                    <section class=" py-2" id="stats">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-gap-3 ">
+                            <div class="col">
+                                <div class="card ps-3 ">
+                                    <div class="d-flex align-items-center gap-3 py-2 ">
+                                        <div
+                                            class="card__icon display-6 bg-warning-subtle text-warning rounded-2  p-2 ">
+                                            <i class="bi bi-cart-plus"></i>
+                                        </div>
+                                        <div class=" lh-sm">
+                                            <div class="lead card__title">Sold Items</div>
+                                            <div class="text-secondary small card__subtitle">This month</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-text py-2 d-flex align-items-center  ">
+                                        <div class="card__total-sold fs-2">10</div>
+                                        <div class="card__analytics-sold text-success ps-2 ">+ 10%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card ps-3 ">
+                                    <div class="d-flex align-items-center gap-3 py-2 ">
+                                        <div
+                                            class="card__icon display-6 bg-success-subtle text-success rounded-2  p-2 ">
+                                            <i class="bi bi-cash-coin"></i>
+                                        </div>
+                                        <div class=" lh-sm">
+                                            <div class="lead card__title">Storage Value</div>
+                                            <div class="text-secondary small card__subtitle">This month</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-text py-2 d-flex align-items-center  ">
+                                        <div class="card__total-store-value fs-2">2.300 $</div>
+                                        <div class="card__analytics-store text-success ps-2 ">+ 20%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card ps-3 ">
+                                    <div class="d-flex align-items-center gap-3 py-2 ">
+                                        <div class="card__icon display-6 bg-info-subtle text-info rounded-2  p-2 ">
+                                            <i class="bi bi-database"></i>
+                                        </div>
+                                        <div class=" lh-sm">
+                                            <div class="lead card__title">Total Items</div>
+                                            <div class="text-secondary small card__subtitle">This month</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-text py-2 d-flex align-items-center  ">
+                                        <div class="card__total-items fs-2">20</div>
+                                        <div class="card__analytics-items text-danger  ps-2 ">- 6%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class=" py-2 border  mt-4 rounded-2 p-3" id="table">
+                        <div class="row py-2 ">
+                            <div class="col-12">
+                                <h4 class="icon-link"><ion-icon name="list"></ion-icon>List of items</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="table-responsive">
+                                    <table class="table table-sm align-middle table-hover small">
+                                    
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+                <footer class="border-top py-4 d-flex justify-content-center align-items-center">
+                    <p class="credits small m-0 ">&copy;2024 - <a href="https://github.com/giacomosx"
+                            target="_blank">@giacomosx</a></p>
+                </footer>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="editItemsModal" tabindex="-1" aria-labelledby="editItemsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="editItemsModalLabel">Edit items</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="product-name" class="form-label">Product name:</label>
+                        <input type="text" class="form-control" id="product-name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="product-brand" class="form-label">Brand name:</label>
+                        <input type="text" class="form-control" id="product-brand">
+                    </div>
+                    <div class="mb-3">
+                        <div class="row row-gap-3">
+                            <div class="col-12 col-sm-6">
+                                <label for="product-img" class="form-label">Img Url:</label>
+                                <input type="text" class="form-control" id="product-img">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <label for="product-price" class="form-label">Price:</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">$</span>
+                                    <input type="number" class="form-control" id="product-price">
+                                    <span class="input-group-text">.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="product-description" class="form-label">Product description:</label>
+                        <textarea class="form-control" id="product-description"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark " data-bs-dismiss="modal">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="./js/dashboard.js"></script>
+</body>
+
+</html>

@@ -11,280 +11,54 @@
 </head>
 
 <body>
-    <header class="container-fluid bg-dark">
+    <header class="container-fluid border-bottom shadow-sm fixed-top bg-white ">
         <nav class="navbar navbar-expand-md pb-1 ">
-            <a href="/index.html" class="navbar-brand text-bg-dark ">
-                <img src="./assets/logoipsum-298.svg" alt="Logo cheaply" class="me-1 ">
+            <a href="/index.html" class="navbar-brand ">
+                <img src="./assets/logoipsum-298.svg" alt="Logo cheaply" class="me-1">
                 cheaply
             </a>
-            <div class="btn-wrapper d-flex order-md-last gap-0 align-items-baseline ">
-                <button class="btn--user border-0 text-bg-dark order-md-last pt-2 fs-3"><ion-icon
-                        name="person-circle"></ion-icon></button>
-                <button class="btn navbar-toggler text-bg-dark fs-3 " data-bs-toggle="collapse"
-                    data-bs-target="#mainNav"><ion-icon name="apps"></ion-icon></button>
+            <div class="btn-wrapper d-flex order-md-last gap-2 align-items-baseline  ">
+                <button class="btn d-md-none fs-3 p-0  " data-bs-toggle="collapse"
+                    data-bs-target="#navbarSearch"><ion-icon name="search"></ion-icon></button>
+                <a href="#" class="fs-2 text-black icon-link text-decoration-none "><ion-icon name="globe-outline"></ion-icon><span class="fs-6 d-none d-md-inline ">View Site</span></a>
+                <button class="btn fs-3 p-0  d-md-none " data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebarMenu"><ion-icon name="grid"></ion-icon>
+                </button>
             </div>
-            <div class="navbar-collapse collapse" id="mainNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="/index.html" class="nav-link text-bg-dark ">Home</a>
-                    </li>
-                </ul>
+            <div class="navbar-collapse collapse justify-content-center " id="navbarSearch">
+                <div class="searchbar d-flex gap-2 p-2 ">
+                    <input type="text" class="form-control form-control-sm "
+                        placeholder="Type here...">
+                    <button class="btn btn-sm  btn-outline-dark">Search</button>
+                </div>
             </div>
         </nav>
     </header>
-    <main class="container-fluid py-3 ">
-        <section class="container__products">
-            <div class="row py-2">
-                <div class="col-12">
-                    <h3 class="h4 ">Dashboard</h3>
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="offcanvas-start offcanvas-md col-md-3 col-lg-2 border-end shadow position-fixed " id="sidebarMenu">
+                <div class="offcanvas-header">
+                    <img src="./assets/logoipsum-298.svg" alt="Logo cheaply" class="me-1 ">
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebarMenu"
+                        aria-label="Close"></button>
                 </div>
-            </div>
-            <div class="row py-1">
-                <div class="col-12">
-                    <h4 class="h5 lead">All products:</h3>
+                <div class="offcanvas-body py-4 text-secondary d-flex flex-column justify-content-between h-100 small">
+                    
                 </div>
-            </div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-xxl-5 row-gap-3 py-3 results__products">
-                <!-- all products here -->
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
+            </aside>
+            <main class="col-12 col-md-9 offset-md-3 col-lg-10 offset-lg-2 px-3 pt-4 mt-5">
+                <div class="row py-2 ">
+                    <div class="col-12">
+                        <h3 class="icon-link page__title"><ion-icon name="analytics"></ion-icon>Index</h3>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card flex-row ">
-                        <div class="card-img__container ">
-                            <img src="https://placehold.co/600x400" alt="" class="h-100 w-100 object-fit-cover">
-                        </div>
-                        <div class="card-img-overlay bg-opacity-75 bg-black text-bg-dark d-flex flex-column justify-content-between">
-                            <h4 class="card-title h5">Lorem ipsum dolor sit.</h4>
-                            <div class="card-text small">
-                                <p class="m-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, eaque!
-                                </p>
-                            </div>
-                            <div class="d-flex justify-content-between p-2">
-                                <button class="btn btn-outline-danger flex-">Delete</button>
-                                <button class="btn btn-outline-light  ">Edit</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- all products here -->
-            </div>
-        </section>
-    </main>
-
+                
+                <footer class="border-top py-4 d-flex justify-content-center align-items-center ">
+                    <p class="credits small m-0 ">&copy;2024 - <a href="https://github.com/giacomosx" target="_blank">@giacomosx</a></p>
+                </footer>
+            </main>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
