@@ -82,23 +82,23 @@
                             <div class="border rounded-2 p-3">
                                 <div class="mb-3">
                                     <label for="product-name" class="form-label">Product name:</label>
-                                    <input type="text" class="form-control" id="product-name">
+                                    <input type="text" class="form-control" id="product-name" data-g-target=".card-title">
                                 </div>
                                 <div class="mb-3">
                                     <label for="product-brand" class="form-label">Brand name:</label>
-                                    <input type="text" class="form-control" id="product-brand">
+                                    <input type="text" class="form-control" id="product-brand" data-g-target=".card-subtitle">
                                 </div>
                                 <div class="mb-3">
                                     <div class="row row-gap-3">
                                         <div class="col-12 col-sm-6">
                                             <label for="product-img" class="form-label">Img Url:</label>
-                                            <input type="text" class="form-control" id="product-img">
+                                            <input type="url" class="form-control" id="product-img">
                                         </div>
                                         <div class="col-12 col-sm-6">
                                             <label for="product-price" class="form-label">Price:</label>
                                             <div class="input-group">
                                                 <span class="input-group-text">$</span>
-                                                <input type="number" class="form-control" id="product-price">
+                                                <input type="number" class="form-control" id="product-price" data-g-target=".product-price">
                                                 <span class="input-group-text">.00</span>
                                             </div>
                                         </div>
@@ -106,10 +106,10 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="product-description" class="form-label">Product description:</label>
-                                    <textarea class="form-control" id="product-description"></textarea>
+                                    <input type="text" class="form-control" id="product-desc" data-g-target=".description-preview"></input>
                                 </div>
                                 <div class="mb-3 text-end ">
-                                    <button class="btn btn-outline-dark icon-link ">Add <ion-icon name="add"></ion-icon></button>
+                                    <button class="btn btn-outline-dark icon-link " id="add-item-btn">Add <ion-icon name="add"></ion-icon></button>
                                 </div>
                             </div>
                         </div>
@@ -118,18 +118,15 @@
                                 <h5>Preview:</h5>
                                 <div class="card flex-xl-row  ">
                                     <div class="card-img-container placeholder rounded-start-2">
-                                        <!-- <img src="https://placehold.co/300x200" alt="" class="w-100 h-100 object-fit-cover "> -->
+                                        <img src="" alt="" class="w-100 h-100 object-fit-cover d-none" id="product-img-preview">
                                     </div>
                                     <div class="card-body placeholder-glow ">
                                         <h4 class="card-title mb-2 placeholder col-5 "></h4>
                                         <span class="card-subtitle text-secondary mb-3 d-block placeholder col-3"></span>
                                         <div class="card-text ">
-                                            <p>
-                                                <span class="placeholder col-12"></span>
-                                                <span class="placeholder col-12"></span>
-                                                <span class="placeholder col-6"></span>
+                                            <p class="placeholder col-10 description-preview">
                                             </p>
-                                            <span class="price text-body-emphasis placeholder bg-black  col-3"></span>
+                                            <span class="product-price d-block  text-body-emphasis placeholder col-3">$&nbsp;</span>
                                         </div>
                                     </div>
                                 </div>
@@ -150,6 +147,7 @@
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="./js/script.js"></script>
     <script src="./js/add.js"></script>
 </body>
 
