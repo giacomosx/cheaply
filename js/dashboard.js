@@ -43,6 +43,7 @@ const populateTable = (data) => {
 
       tr.querySelector('.deleteBtn').addEventListener('click', () => {
         ninjaFetch(ENDPOINT + item._id, {method: 'DELETE'})
+        .then(alert('Itemse correctly deleted'))
         .then(ninjaFetch(ENDPOINT).then(res => populateTable(res)))
         .catch(err => console.error(err))
       })

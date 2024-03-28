@@ -34,8 +34,7 @@ document.getElementById('add-item-btn').addEventListener('click', () => {
       }
 
     ninjaFetch(ENDPOINT, {method: 'POST', body: product})
-    .then(console.log(product))
-    //.then(location.assign('/dashboard.html'));
+    .then(alert('Items correctly added!'))
+    .then(location.assign('/dashboard.html'))
+    .catch(err => console.error(err));
 })
-
-console.log(document.querySelectorAll('input'));
