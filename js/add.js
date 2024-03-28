@@ -1,7 +1,6 @@
 const inputFields = document.querySelectorAll('input');
 inputFields.forEach(field => field.addEventListener('input', () => {
     if (field.id !== 'product-img'){
-        console.log(field.id);
         const targetEl = document.querySelector(field.getAttribute('data-g-target'));
         targetEl.innerHTML = field.value;
         targetEl.classList.remove('placeholder');
@@ -18,7 +17,6 @@ productImgField.addEventListener('change', () => {
     targetEl.setAttribute('src', productImgField.value);
     targetEl.classList.remove('d-none')
     document.querySelector('.card-img-container').classList.remove('placeholder');
-    console.log(targetEl);
 })
 
 
@@ -34,7 +32,14 @@ document.getElementById('add-item-btn').addEventListener('click', () => {
       }
 
     ninjaFetch(ENDPOINT, {method: 'POST', body: product})
-    .then(alert('Items correctly added!'))
-    .then(location.assign('/dashboard.html'))
-    .catch(err => console.error(err));
+    .then(res => {
+        if (res) showAlert('.alert-section', 'success')
+    })
+    .catch(err => {
+        console.error(err)
+        showAlert('.alert-section', 'danger')
+    })
+    .finally(setTimeout(() => {
+        location.reload()
+    }, 2000));
 })

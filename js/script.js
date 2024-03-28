@@ -39,3 +39,11 @@ const addSpinner = (node) => {
 document.querySelector(node).classList.remove('d-none')
 document.querySelector('.spinner-container').classList.add('d-none')
 }
+
+const showAlert = (node, type) => {
+  document.querySelector(node).classList.remove('d-none')
+  document.querySelector('.alert').classList.add(`alert-${type}`)
+  type === 'success'
+  ? document.querySelector('.alert-message').innerHTML = `Items correctly added!`
+  : document.querySelector('.alert-message').innerHTML = `Ops! there was an error`
+}

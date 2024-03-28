@@ -1,6 +1,9 @@
 window.onload = () => {
   ninjaFetch(ENDPOINT)
-  .then(res => populateTable(res))
+  .then(res => {
+    populateTable(res)
+    calcAnalitycs(res)
+  })
   .finally(removeSpinner('main'))
 }
 
@@ -28,7 +31,7 @@ const populateTable = (data) => {
           <th scope="row">${item.name}</td>
           <td>${item.brand}</td>
           <td>${item.description}</td>
-          <td>${item.price}</td>
+          <td class="tb-price">${item.price}</td>
           <td>
             <div class="btn-group">
                 <button
@@ -42,10 +45,13 @@ const populateTable = (data) => {
       `;
 
       tr.querySelector('.deleteBtn').addEventListener('click', () => {
-        ninjaFetch(ENDPOINT + item._id, {method: 'DELETE'})
-        .then(alert('Itemse correctly deleted'))
-        .then(ninjaFetch(ENDPOINT).then(res => populateTable(res)))
-        .catch(err => console.error(err))
+        if (confirm('Are you sure?')) {
+          ninjaFetch(ENDPOINT + item._id, {method: 'DELETE'})
+          .then(res => {
+            if (res) location.reload()
+          })
+          .catch(err => console.error(err)) 
+        }
       })
 
       tbody.append(tr);
@@ -81,10 +87,18 @@ if (modal) {
       }
   
       ninjaFetch(ENDPOINT + id, {method: 'PUT', body: product})
-      .then(ninjaFetch(ENDPOINT).then(res => populateTable(res)))
+      .then(ninjaFetch(ENDPOINT).then(res => {
+        populateTable(res);
+        calcAnalitycs(res)
+      }))
       .catch(err => console.error(err))
 
     })
 
   })
 }
+
+const calcAnalitycs = (res) => {
+  document.querySelector('.card__total-store-value').innerHTML = res.reduce((partial, items) => items.price + partial, 0) + ' $';
+  document.querySelector('.card__total-items').innerHTML = res.length;
+} 
