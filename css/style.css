@@ -1,7 +1,11 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-#mainContent, .spinner-container {
+#mainContent, .spinner-container, #main-content-home {
     min-height: calc(100vh - 100px);
+}
+
+#main-content-home {
+    margin-top: 63px;
 }
 
 #sidebarMenu {
@@ -25,6 +29,16 @@ footer {
 .card-img-container {
     min-height: 200px;
     overflow-x: hidden;
+}
+
+.card-img-container--home {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-img-container--home img {
+    object-position: center;
 }
 
 
