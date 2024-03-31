@@ -10,9 +10,9 @@ const getCards = (res) => {
     res.map(item => {
         const col = document.createElement('col');
         col.innerHTML = /* HTML */ `
-            <div class="card  p-2">
-                <div class="card-img-container--home" >
-                    <img src="${item.imageUrl} " alt="" class="w-100 h-100 object-fit-cover">
+            <div class="card  p-2 h-100 justify-content-between">
+                <div class="card-img-container--home h-100 " >
+                    <img src="${item.imageUrl} " alt="" class="w-100 h-100 object-fit-cover img-fluid ">
                 </div>
                 <div class="card-body">
                     <h4 class="card-title h5 mb-2">${item.name}</h4>
