@@ -10,7 +10,7 @@ const getCards = (res) => {
     res.map(item => {
         const col = document.createElement('col');
         col.innerHTML = /* HTML */ `
-            <div class="card  p-2 h-100 justify-content-between">
+            <div class="card  py-2 px-1 h-100 justify-content-between">
                 <div class="card-img-container--home h-100 " >
                     <img src="${item.imageUrl} " alt="" class="w-100 h-100 object-fit-cover img-fluid ">
                 </div>
@@ -18,10 +18,9 @@ const getCards = (res) => {
                     <h4 class="card-title h5 mb-2">${item.name}</h4>
                     <span class="card-subtitle text-secondary mb-3 d-block">${item.brand}</span>
                     <div class="card-text ">
-                        <p class="description text-truncate ">${item.description}</p>
                         <div class="card-buttons d-flex justify-content-between align-items-center ">
-                            <span class="product-price text-dark-emphasis ">${item.price}</span>
-                            <a class="btn btn-dark flex-grow-0 " href="/product.html?id=${item._id}">View</a>
+                            <span class="product-price text-dark-emphasis small">${item.price}</span>
+                            <a class="btn btn-dark flex-grow-0 small" href="product.html?id=${item._id}">View</a>
                         </div>
                     </div>
                 </div>

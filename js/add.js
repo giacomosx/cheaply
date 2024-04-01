@@ -21,7 +21,6 @@ productImgField.addEventListener('change', () => {
 
 
 document.getElementById('add-item-btn').addEventListener('click', () => {
-    //let [brand, description, imageUrl, name, price ] = document.querySelectorAll('input');
 
     let product = {
         name: document.querySelector('#product-name').value,

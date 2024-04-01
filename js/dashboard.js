@@ -38,8 +38,8 @@ const populateTable = (data) => {
                 class="btn btn-sm btn-outline-dark small"
                 data-bs-toggle="modal"
                 data-bs-target="#editItemsModal"
-                data-bs-whatever="${item._id}">Edit</button><button
-                class="btn btn-sm btn-outline-danger small deleteBtn">Delete</button>
+                data-bs-whatever="${item._id}"><i class="bi bi-pencil-square"></i></button><button
+                class="btn btn-sm btn-outline-danger small deleteBtn"><i class="bi bi-trash"></i></button>
             </div>
           </td>
       `;
