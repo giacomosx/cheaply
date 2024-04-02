@@ -49,14 +49,3 @@ const showAlert = (node, type) => {
     ? document.querySelector('.alert-message').innerHTML = `Items correctly added!`
     : document.querySelector('.alert-message').innerHTML = `Ops! there was an error`
   }
-     
-searchBtn.addEventListener('click', () => {
-  const query = document.querySelector('.searchbar input').value.toLowerCase();
-  
-  ninjaFetch(ENDPOINT)
-  .then(res => {
-    let results = res.filter(res => res.name.toLowerCase().includes(query))
-    console.log(results)
-  })
-  .catch(err => console.log(err))
-})
