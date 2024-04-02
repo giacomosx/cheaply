@@ -30,3 +30,14 @@ const getCards = (res) => {
     })
 
 }
+
+searchBtn.addEventListener('click', () => {
+    const query = document.querySelector('.searchbar input').value.toLowerCase();
+    
+    ninjaFetch(ENDPOINT)
+    .then(res => {
+      let results = res.filter(res => res.name.toLowerCase().includes(query))
+      getCards(results)
+    })
+    .catch(err => console.log(err))
+  })

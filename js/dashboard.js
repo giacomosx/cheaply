@@ -102,3 +102,14 @@ const calcAnalitycs = (res) => {
   document.querySelector('.card__total-store-value').innerHTML = res.reduce((partial, items) => items.price + partial, 0) + ' $';
   document.querySelector('.card__total-items').innerHTML = res.length;
 } 
+
+searchBtn.addEventListener('click', () => {
+  const query = document.querySelector('.searchbar input').value.toLowerCase();
+  
+  ninjaFetch(ENDPOINT)
+  .then(res => {
+    let results = res.filter(res => res.name.toLowerCase().includes(query))
+    populateTable(results)
+  })
+  .catch(err => console.log(err))
+})

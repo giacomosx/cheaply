@@ -61,19 +61,3 @@ span.product-price::after {
     }
 
 }
-
-/* tablet  */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-}
-
-/* Desktop */
-@media only screen and (min-width: 1024px) and (max-width: 1439px) {
-    
-}
-
-/* Desktop XXL */
-@media only screen and (min-width: 1440px) {
-    .card-img-container {
-        width: 300px;
-    }
-}
