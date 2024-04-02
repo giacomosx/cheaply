@@ -5,6 +5,7 @@ window.onload = () => {
 
 
 const getCards = (res) => {
+    document.querySelector('.alert-results').innerHTML = '';
     document.querySelector('#cards-container').innerHTML = '';
 
     res.map(item => {
@@ -37,7 +38,10 @@ searchBtn.addEventListener('click', () => {
     ninjaFetch(ENDPOINT)
     .then(res => {
       let results = res.filter(res => res.name.toLowerCase().includes(query))
-      getCards(results)
+      results.length > 0
+    ? getCards(results)
+    : displayNotFound('.alert-results')
+      
     })
     .catch(err => console.log(err))
   })

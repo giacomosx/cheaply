@@ -9,6 +9,7 @@ window.onload = () => {
 
 
 const populateTable = (data) => {   
+  document.querySelector('.alert-results').innerHTML = '';
   const table = document.querySelector('table');
   table.innerHTML = '';
 
@@ -109,7 +110,9 @@ searchBtn.addEventListener('click', () => {
   ninjaFetch(ENDPOINT)
   .then(res => {
     let results = res.filter(res => res.name.toLowerCase().includes(query))
-    populateTable(results)
+    results.length > 0
+    ? populateTable(results)
+    : displayNotFound('.alert-results')
   })
   .catch(err => console.log(err))
 })

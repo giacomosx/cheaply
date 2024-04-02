@@ -49,3 +49,13 @@ const showAlert = (node, type) => {
     ? document.querySelector('.alert-message').innerHTML = `Items correctly added!`
     : document.querySelector('.alert-message').innerHTML = `Ops! there was an error`
   }
+
+
+const displayNotFound = (node) => {
+  document.querySelector(node).innerHTML = /* HTML */ `
+    <div class="alert alert-light" role="alert">
+      <h4 class="alert-heading">Item not found!</h4>
+      <p>Try with another keyword!</p>
+    </div>
+  `
+}

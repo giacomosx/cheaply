@@ -40,8 +40,7 @@ footer {
     min-height: 200px;
 }
 
-.card-img--single img {
-    
+.card-img--single img {  
     max-width: 460px;
 }
 
@@ -49,7 +48,7 @@ footer {
     background-color: #fff !important;
 }
 
-.card {
+#cards-container .card {
     max-height: 360px;
 }
 
