@@ -49,7 +49,7 @@ footer {
 }
 
 #cards-container .card {
-    max-height: 360px;
+    max-height: 560px;
 }
 
 span.product-price::after {
